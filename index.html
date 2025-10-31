@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightFlow - Employee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>InsightFlow Employee Dashboard</h1>
+        </header>
+        
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search by name...">
+            <select id="roleFilter">
+                <option value="">All Roles</option>
+            </select>
+            <button id="addEmployeeBtn">Add Employee</button>
+        </div>
+        
+        <div id="tableContainer"></div>
+        
+        <div id="summary" class="summary-card"></div>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Edit Employee</h2>
+                <form id="employeeForm">
+                    <input type="hidden" id="employeeId">
+                    <label>Name: <input type="text" id="employeeName" required></label>
+                    <label>Role: <input type="text" id="employeeRole" required></label>
+                    <label>Score: <input type="number" id="employeeScore" min="0" max="100" required></label>
+                    <div class="form-buttons">
+                        <button type="submit">Save</button>
+                        <button type="button" id="cancelBtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
